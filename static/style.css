@@ -1,0 +1,47 @@
+.text-overflow {
+    word-break: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.flash-card-main-body {
+    min-height: calc(100vh - 208px) !important;
+}
+
+.btn-info {
+    color: #FCFCFCF2;
+    background-color: #03557f;
+    border-color: #03557f;
+}
+
+.link-info {
+    color: #03557f;
+}
+
+.btn-info:hover {
+    color: #03557f;
+    background-color: #FCFCFCF2;
+    border-color: #03557f;
+}
+
+.link-info:hover {
+    color: #056fa6;
+}
+
+.btn-outline-info {
+    color: #03557f;
+    border-color: #03557f;
+}
+
+.btn-outline-info:hover {
+    color: #FCFCFCF2;
+    background-color: #03557f;
+    border-color: #03557f;
+}
+
+.btn-info:focus {
+    color: #FCFCFCF2 !important;
+    background-color: #03557f !important;
+    border-color: #03557f !important;
+}

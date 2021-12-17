@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome/font-awesome.min.css') }}"/>
+    <title>Edit Card</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #03557f">
+    <div class="container">
+        <a class="navbar-brand" href="/dashboard/{{ u1.user_id }}">FlashCard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/dashboard/{{ u1.user_id }}/create_deck">
+                        <i class="fa fa-th-large"></i> Create Deck</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard/{{ u1.user_id }}/add_cards">
+                        <i class="fa fa-plus-square"></i> Add cards</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/dashboard/{{ u1.user_id }}/edit_deck">
+                        <i class="fa fa-edit"></i> Edit Deck</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-user-circle" style="margin: 5px"> </i> Welcome {{ u1.user_name }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/logout">Logout <i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container flash-card-main-body">
+    <div class="row">
+        <div class="p-md-2 ">
+            <h3> Edit Card </h3>
+        </div>
+        <hr>
+        <div class="col-lg-6 col-md-6 col-sm-12 pt-lg-2">
+            <form action="/dashboard/{{ u1.user_id }}/edit_deck/{{ d }}/edit_card/{{ c.c_id }}" method="POST"
+                  id="card_edit_form">
+
+                <div class="pt-1 mb-3">
+                    <label for='updated_card_front' class="form-label"> Front </label>
+                    <input type="text" class="form-control" name="updated_card_front" id="updated_card_front"
+                           value="{{ c.c_front }}" required/>
+                </div>
+
+                <div class="pt-1 mb-3">
+                    <label for='updated_card_back' class="form-label"> Back </label>
+                    <input type="text" class="form-control" name="updated_card_back" id="updated_card_back"
+                           value="{{ c.c_back }}" required/>
+                </div>
+
+                <div class="pt-1 mb-3">
+                    <button class="btn btn-info btn-lg " type="submit" style="min-width: 150px">Edit</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 150px">
+    <div class="container">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item ">
+                {#                <h5>About Us</h5>#}
+                {#                <hr />#}
+                {#                <small class="text-muted"></small>#}
+            </li>
+        </ul>
+        <div class="pull-right">
+            © FlashCard 2021
+        </div>
+    </div>
+</nav>
+</body>
+</html>

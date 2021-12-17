@@ -1,0 +1,2 @@
+class DeckService:
+    DATA = []

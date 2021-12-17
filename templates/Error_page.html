@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Error</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome/font-awesome.min.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #03557f">
+    <div class="container">
+        <a class="navbar-brand">FlashCard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+    </div>
+</nav>
+
+<div class="container flash-card-main-body">
+    <div class="row">
+        <div class="offset-lg-3 col-lg-6 offset-sm-1 col-sm-10 offset-md-3 col-md-6">
+
+            <div class="card  text-center mt-lg-2" style=" padding-top: 1rem; min-height: 490px; align-items: center">
+                <img src="{{ url_for('static',filename="images/error3.png") }}" alt="Error icon" width="275"
+                     height="275">
+                <div class="card-body ">
+                    <h5 class="card-title">Error</h5>
+                    <p class="card-text">{{ message }}</p>
+                    <a href="{{ back }}" class="btn btn-info" style="width: 25rem">Go Back</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 150px">
+    <div class="container">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item ">
+                {#                <h5>About Us</h5>#}
+                {#                <hr />#}
+                {#                <small class="text-muted"></small>#}
+            </li>
+        </ul>
+        <div class="pull-right">
+            © FlashCard 2021
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>

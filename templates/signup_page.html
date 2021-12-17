@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        Sign Up
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome/font-awesome.min.css') }}"/>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md ">
+            <div class="d-flex align-items-center"
+                 style="padding-top: 14vh;padding-left: 24vw; ">
+
+                <form style="width: 35rem;" class="card p-3" action="/signup" method="POST" id="signup_form">
+                    <h3 class="fw-normal mb-3 pb-2" style="letter-spacing: 1px;">User Registration</h3>
+                    <br>
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="signup_fullname">Full Name</label>
+                        <input type="text" id="signup_fullname" name="signup_fullname"
+                               class="form-control form-control-lg"/>
+
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="signup_username">Username</label>
+                        <input type="text" id="signup_username" name="signup_username"
+                               class="form-control form-control-lg" required/>
+
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="signup_email">Email Id</label>
+                        <input type="email" id="signup_email" name="signup_email" class="form-control form-control-lg"
+                               required/>
+
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="signup_password">Password</label>
+                        <input type="password" id="signup_password" name="signup_password"
+                               class="form-control form-control-lg" required/>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 ">
+                            <button class="btn btn-info btn-lg" type="submit" style="width: 100%;">SignUp
+                            </button>
+
+                        </div>
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 ">
+                            <button class="btn btn-outline-info btn-lg" type="reset" style="width: 100%;">Reset</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

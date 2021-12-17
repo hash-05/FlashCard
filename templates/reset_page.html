@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        Reset Password
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontawesome/font-awesome.min.css') }}"/>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm text-black" style="padding-left: 27vw;">
+            <div class=" d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5"
+                 style="margin-top: 20vh !important;">
+
+                <form style="width: 35rem; " class="card p-3" action="/reset_password" , method="POST">
+                    <h3 class="fw-normal mb-3 pb-2" style="letter-spacing: 1px;">Reset Password</h3>
+                    <br>
+
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="signup_email">Email</label>
+                        <input type="text" name='signup_email' id="signup_email" class="form-control form-control-lg"
+                               required/>
+
+                    </div>
+
+                    <div class="form-outline mb-2">
+                        <label class="form-label" for="reset_pass">Enter New Password</label>
+                        <input type="password" name='reset_pass' id="reset_pass" class="form-control form-control-lg"
+                               required/>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <button class="btn btn-info btn-lg" type="submit"
+                                    style="width: 100%;">Submit
+                            </button>
+
+                        </div>
+                        <div class="col-md-6 ">
+                            <button class="btn btn-outline-info btn-lg" type="reset" style="width: 100%;">Reset</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
